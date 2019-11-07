@@ -3,14 +3,14 @@ var arrayAmountRegix;
 var arrayOrderRegix;
 var arrayContentRegix;
 
-function test2() {
-  getScrapingStrs();
-  
-  var baseStrFrom = '<td width="90" align="right" style="width:120px;padding:0 20px 0 0;font-size:' 
-  + '16px;font-weight:600;white-space:nowrap;">\r\n'
-  +'                          ';  
-  createFile('baseStrFrom_html.txt',baseStrFrom);
-}
+//function test2() {
+//  getScrapingStrs();
+//  
+//  var baseStrFrom = '<td width="90" align="right" style="width:120px;padding:0 20px 0 0;font-size:' 
+//  + '16px;font-weight:600;white-space:nowrap;">\r\n'
+//  +'                          ';  
+//  createFile('baseStrFrom_html.txt',baseStrFrom);
+//}
 
 // 金額取得
 function getAmount(parser) {

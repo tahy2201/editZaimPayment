@@ -58,8 +58,11 @@ function getReciptItems(htmlStr) {
   // 現在時刻取得
   var nowDate = new Date();
 
-  insert([{orderNum: orderNum, date: date, content: '[' + billingSource + '] ' + content ,
-           amount: amount, createDate: nowDate, updateDate: nowDate}]);
+  var insRecord = {orderNum: orderNum, date: date, content: '[' + billingSource + '] ' + content ,
+           amount: amount, createDate: nowDate, updateDate: nowDate}
+
+  // Logger.log("出力:" + JSON.stringify(insRecord))
+  insert([insRecord]);
   
 }
 

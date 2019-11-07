@@ -4,10 +4,10 @@ var name = 't_apple_amount';
 function execDb() {
   var dbIns = SpreadSheetsSQL.open(id, name);
 
-  dbIns.insertRows([
-  {orderNum: 'MJ001', date: 30, content: 'AppleMusic', amount: 960},
-  {orderNum: 'MJ002', date: 30, content: 'iTunes', amount: 200}
-]);
+//  dbIns.insertRows([
+//  {orderNum: 'MJ001', date: 30, content: 'AppleMusic', amount: 960},
+//  {orderNum: 'MJ002', date: 30, content: 'iTunes', amount: 200}
+//]);
 
   var records = [
   {orderNum: 'MJ001', date: 30, content: 'AppleMusic', amount: 960},
@@ -28,7 +28,7 @@ function insert(records) {
       Logger.log('This record is already exists.:' + convRecordStrForLogger(records[i]));
       // throw new Error("一意制約違反");
     } else {
-     dbIns.insertRows(records[i]); 
+     dbIns.insertRows([records[i]]); 
     }
   }
 }
